@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-class Search extends React.Component {
+import './index.css';
+class App extends React.Component {
   render() {
-    return <div>Search Component</div>
+    return <div className="app-container">Search Component</div>
   }
 }
 
 ReactDOM.render(
-  <Search/>,
+  <App/>,
   document.getElementById('root')
 )
