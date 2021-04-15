@@ -6,5 +6,10 @@ module.exports = {
   output: {
     path:path.join(__dirname, "dist"),
     filename: "bundle.js"
+  },
+  module: {
+    rules: [{
+      test: /\.js$/, use: 'babel-loader'
+    }]
   }
 }
