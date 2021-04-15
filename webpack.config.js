@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'production',
@@ -12,6 +13,11 @@ module.exports = {
     port: 8090,
     hot: true
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, 'template/index.html')
+    })
+  ],
   module: {
     rules: [{
       test: /\.js$/, use: 'babel-loader'
