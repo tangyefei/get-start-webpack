@@ -4,8 +4,13 @@ module.exports = {
   mode: 'production',
   entry: "./src/index.js",
   output: {
-    path:path.join(__dirname, "dist"),
+    path: path.join(__dirname, "dist"),
     filename: "bundle.js"
+  },
+  devServer: {
+    contentBase: './dist',
+    port: 8090,
+    hot: true
   },
   module: {
     rules: [{
